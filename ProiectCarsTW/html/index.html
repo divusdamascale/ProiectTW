@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lato Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato" rel="stylesheet">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- css -->
+    <link rel="stylesheet" href="../scss/style.css">
+
+    <title>DGDRental</title>
+</head>
+    <body>
+        <!-- Header start -->
+        <header class="header">
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div class="containerHeader">
+                <!-- <canvas id="myCanvas"></canvas> -->
+                <svg id="mySvg"></svg>
+                <a href="#" class="logo">DGD<span>Rental</span> </a>
+            </div>
+            <nav class="navbar">
+                <a href="#home">Acasa</a>
+                <a href="#vehicles">Vehicule</a>
+                <a href="#services">Servicii</a>
+                <a href="#featured">Produse</a>
+                <a href="#reviews">Recenzii</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div id="login-btn">
+                <button class="btn">login</button>
+                <i class="far fa-user"></i>
+            </div>
+
+
+        </header>
+
+        <!-- Header end -->
+
+        <!-- login form -->
+        <div class="login-form-container">
+
+            <span class="fas fa-times" id="close-login-form"></span>
+            <form>
+                <h3>user login</h3>
+                <input type="email" name="email" placeholder="Email" class="box">
+                <input type="password" name="password" placeholder="Password" class="box">
+                <p><a href="">Mi-am uitat parola</a></p>
+                <input type="submit" value="login now" class="btn">
+                <p>or login with</p>
+                <div class="buttons">
+                    <a href="#" class="btn">Google</a>
+                    <a href="#" class="btn">Facebook</a>
+                </div>
+                <p><a href="#">Creeaza-ti cont</a></p>
+            </form>
+        </div>
+    <!-- end login form -->
+
+    <!-- home section start -->
+    <section class="home" id="home">
+        <h1 class="home-parallax" data-speed="-2">Gaseste-ti masina potrivita</h1>
+        <img class="home-parallax" data-speed="5" src="../images/png/pngegg.png" alt="5 cars in row">
+        <a href="" class="btn home-parallax" data-speed="7">Exploreaza</a>
+    </section>
+    <!-- home section end -->
+
+    <!-- icons section starts -->
+    <section class="icons-container">
+
+        <div class="icon">
+            <i class="fas fa-home"></i>
+            <div class="content">
+                <h3>150+</h3>
+                <p>Locatii</p>
+            </div>
+        </div>
+
+        
+        <div class="icon">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>5000+</h3>
+                <p>Masini Inchiriate</p>
+            </div>
+        </div>
+        
+        <div class="icon">
+            <i class="fas fa-user"></i>
+            <div class="content">
+                <h3>1000+</h3>
+                <p>Clienti multumiti</p>
+            </div>
+        </div>
+
+
+        
+        <div class="icon">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>250+</h3>
+                <p>Masini noi</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- icons section ends  -->
+
+    <!-- vehicles start -->
+    <section class="vehicles" id="vehicles">
+        <h1 class="heading">Alegeri <span>Populare</span></h1>
+
+        <div class="swiper vehicle-slider">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--  vehicles end -->
+
+    <!-- Services start -->
+    <section class="services" id="services">
+        <h1 class="heading"> Serviciile <span>Noastre</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-car"></i>
+                <h3>Inchirieri Masini</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, tempora!</p>
+                <a href="#" class="btn">Mai multe..</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-tools"></i>
+                <h3>Reparatii</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, tempora!</p>
+                <a href="#" class="btn">Mai multe..</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-crash"></i>
+                <h3>Asigurari RCA</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, tempora!</p>
+                <a href="#" class="btn">Mai multe..</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-battery"></i>
+                <h3>Centru colectare baterii</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, tempora!</p>
+                <a href="#" class="btn">Mai multe..</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-gas-pump"></i>
+                <h3>Service revizii anuale</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, tempora!</p>
+                <a href="#" class="btn">Mai multe..</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>Asistenta 24/7</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, tempora!</p>
+                <a href="#" class="btn">Mai multe..</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Services end -->
+
+    <!-- Featured start -->
+    <section class="featured" id="featured">
+        <h1 class="heading">Masini <span>Disponibile Acum</span></h1>
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="../images/png/veh-1png.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/veh-2.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/veh-3.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/veh-4.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/veh-5.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/veh-6.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="swiper featured-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="../images/png/car-7.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/car-8.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/car-2.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/car-1.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/car-5.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/png/car-3.png" alt="">
+                    <h3>Available NOW</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">400$</div>
+                    <a href="" class="btn rent">Inchiriaza acum</a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- Featured end -->
+    <!-- review start -->
+    <section class="review" id="reviews">
+        <h1 class="heading">Cateva <span>Pareri</span></h1>
+
+        <div class="swiper review-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="../images/jpg/h1.jpg" alt="h1">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae voluptatum praesentium nesciunt veritatis consectetur facere. Praesentium dignissimos voluptatibus neque.</p>
+                        <h3>John Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/jpg/h2.jpg" alt="h1">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae voluptatum praesentium nesciunt veritatis consectetur facere. Praesentium dignissimos voluptatibus neque.</p>
+                        <h3>John Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/jpg/h3.jpg" alt="h1">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae voluptatum praesentium nesciunt veritatis consectetur facere. Praesentium dignissimos voluptatibus neque.</p>
+                        <h3>John Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/jpg/h4.jpg" alt="h1">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae voluptatum praesentium nesciunt veritatis consectetur facere. Praesentium dignissimos voluptatibus neque.</p>
+                        <h3>John Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/jpg/h5.jpg" alt="h1">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae voluptatum praesentium nesciunt veritatis consectetur facere. Praesentium dignissimos voluptatibus neque.</p>
+                        <h3>John Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="../images/jpg/h6.jpg" alt="h1">
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe recusandae voluptatum praesentium nesciunt veritatis consectetur facere. Praesentium dignissimos voluptatibus neque.</p>
+                        <h3>John Doe</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- review end -->
+
+    <!-- Contact start -->
+
+
+    <section class="contact" id="contact">
+    <h1 class="heading"><span>Contact</span></h1>
+        
+    <div class="row">
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2860.604063645991!2d28.64728617670627!3d44.194623817244626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40bafab74f79e125%3A0x492ba410ae52e4d7!2zVW5pdmVyc2l0YXRlYSDigJ5PdmlkaXVz4oCdIGRpbiBDb25zdGFuyJth!5e0!3m2!1sen!2sro!4v1685288344685!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <form id="contact-form">
+            <h3>Trimite-ne un mesaj</h3>
+            <input type="text" id="nume" placeholder="Numele tau" class="box">
+            <input type="email" id="email" placeholder="Email" class="box">
+            <textarea name="mesaj" id="mesaj" placeholder="Mesaj" cols="30" rows="10" class="box"></textarea>
+            <input type="submit" value="Trimite mesaj" class="btn">
+        </form>
+    </div>
+    </section>
+
+
+    <!-- Contact end -->
+
+    
+    <!-- footer start -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Locatiile noastre:</h3>
+                <a href="#"><i class="fa fa-map-marker-alt"></i>Constanta</a>
+                <a href="#"><i class="fa fa-map-marker-alt"></i>Navodari</a>
+                <a href="#"><i class="fa fa-map-marker-alt"></i>Macin</a>
+                <a href="#"><i class="fa fa-map-marker-alt"></i>Mangalia</a>
+            </div>
+
+           
+            <div class="container">
+                <div class="sprite"></div>
+              </div>
+
+
+            <div class="box">
+                <h3>Urmareste-ne si aici:</h3>
+                <a href="#"><i class="fab fa-facebook"></i>Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fab fa-youtube"></i>Youtube</a>
+                <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+            </div>
+        </div>
+
+        <div class="credit">created by Ciprian Gorghiu| Dragomir Alin | Dutu Denis </div>
+        <a href="#" class="logo">DGD<span>Rental</span> </a>
+    </section>
+
+    <!--  footer end -->
+
+
+
+
+
+        <!-- swiper js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <!-- custom js -->
+        <script src="../js/script.js"></script>
+        <!-- svg script -->
+        <script src="../js/scriptSVG.js"></script>
+        <!-- script sprite -->
+        <script src="../js/sprite.js"></script>
+    </body>
+</html>

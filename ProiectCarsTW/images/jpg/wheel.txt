@@ -1,0 +1,48 @@
+-> html
+<canvas id="myCanvas"></canvas>
+
+-> scss
+canvas {
+    width: 150px;
+    height: 75px;
+    margin: 3px;
+    padding: 0.5px;
+}
+
+-> javascript
+
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 25;
+    const wheelThickness = 8;
+    const spokeCount = 12;
+
+    function drawWheel() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Desenarea roții
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+      ctx.lineWidth = wheelThickness;
+      ctx.strokeStyle = "limegreen";
+      ctx.stroke();
+
+      // Desenarea spițelor
+      const angle = (2 * Math.PI) / spokeCount;
+      for (let i = 0; i < spokeCount; i++) {
+        const spokeX = centerX + Math.cos(i * angle) * radius;
+        const spokeY = centerY + Math.sin(i * angle) * radius;
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.lineTo(spokeX, spokeY);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "limegreen";
+        ctx.stroke();
+      }
+    }
+
+    drawWheel();
+

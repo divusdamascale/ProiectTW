@@ -1,0 +1,965 @@
+// @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$lightGreen:#B9E937;
+$middleGreen:#57D131;
+$blackGreen: #406661;
+$weirdColor: #F5F5F5;
+$border: .1rem solid rgba(0,0,0,0.1);
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+@keyframes spriteAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: -576px -192px; }
+  }
+*
+{
+    //default settings
+    font-family: 'Lato', sans-serif;
+    margin:0;padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    // text-transform: capitalize;
+    transition: all .2s linear;
+    // background-color: $weirdColor;
+
+}
+
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+
+    body
+    {
+
+
+        .heading
+        {
+            text-align: center;
+            padding-bottom: 2rem;
+            font-size: 4.5rem;
+            color: black;
+
+            span
+            {
+                position: relative;
+                z-index: 0;
+            }
+
+            span::before
+            {
+                content: '';
+                position: absolute;
+                bottom: 1rem;left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                background-color: #B9E937;
+                clip-path: polygon(0 90%,100% 80% ,100% 100%,0% 100%);
+               
+            }
+        }
+        // height: 300rem;
+        .header
+        {
+            
+            position: fixed;
+            top:0;left:0;right: 0;
+            z-index: 999;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3rem 9%;
+            #menu-btn
+            {
+                font-size: 2.5rem;
+                cursor: pointer;
+                display: none;
+            }
+
+            .containerHeader
+            {
+                display: flex;
+                flex-direction: row;
+               
+            }
+            
+            svg
+            {
+                height: 50px;
+                width: 80px;
+            }
+            .logo
+            {
+                font-size: 2.5rem;
+                color: $lightGreen;
+                font-weight: bolder;
+                align-self: center;
+                span
+                {
+                    color:$blackGreen;
+                }
+        }
+        
+
+            .navbar
+            {
+                a
+                {
+                    font-size: 2rem;
+                    margin:0 1rem;
+                    color: black;
+                    font-weight:500;
+                }
+
+                a:hover
+                {
+                    color: $lightGreen;
+                }
+            }
+
+
+            .btn
+            {
+                margin-top: 0;
+            }
+
+            #login-btn
+            {
+                i
+                {
+                    font-size: 2.5rem;
+                    // color: white;
+                    cursor: pointer;
+                    display: none;
+                }
+            }
+            
+    }
+
+    .header.active
+    {
+        box-shadow: $box-shadow;
+        padding: 2rem 9%;
+    }
+
+    .btn
+    {
+        display: inline-block;
+        margin-top: 1rem;
+        border-radius: .5rem;
+        background-color: $middleGreen;
+        color: black;
+        font-weight: 500;
+        font-size: 1.7rem;
+        cursor: pointer;
+        padding: .8rem 3rem;
+    }
+
+    .btn:hover
+    {
+       background-color: $lightGreen;
+    }
+
+    .login-form-container
+    {
+        position: fixed;
+        top:-105%;left:0;
+        z-index: 1000;
+        height: 100%;
+        width: 100%;
+        background: rgba(255,255,255,.9);
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        opacity: 0;
+
+
+
+        #close-login-form
+        {
+            position: absolute;
+            top: 1.5rem;right: 2.5rem;
+            font-size: 5rem;
+            color: black;
+            cursor: pointer;
+        }
+
+
+        form
+        {
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: .5rem;
+            box-shadow: $box-shadow;
+            background: #fff;
+            border: $border;
+            text-align: center;
+            width: 40rem;
+
+
+            h3
+            {
+                color: black;
+                font-size: 2.5rem;
+                padding-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            .box
+            {
+                margin: .7rem 0;
+                width: 100%;
+                text-transform: none;
+                color:black;
+                font-size:1.6rem;
+                padding: 1rem 1.2rem;
+                border: $border;
+                border-radius: .5rem;
+            }
+
+            p
+            {
+                padding: 1rem 0 ;
+                font-size: 1.5rem;
+                color: #B9E937;
+
+                a
+                {
+                    color: #406661;
+                    text-decoration: underline;
+                }
+            }
+
+            .btn
+            {
+                display: block;
+                width: 100%;
+                margin: .5rem 0;
+            }
+
+
+            .buttons
+            {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+               
+            }
+        }
+    }
+
+    .login-form-container.active
+    {
+        top:0;
+        opacity: 1;
+    }
+
+    section
+    {
+        padding: 2rem 9%;
+
+    }
+
+    .home
+    {
+        padding-top: 10rem;
+        text-align: center;
+        overflow-x: hidden;
+
+        h1
+        {
+            font-size: 7.5vh;
+            text-transform: uppercase;
+            color: black;
+        }
+
+        img
+        {
+            width: 100%;
+            margin: 1rem 0;
+        }
+    }
+
+
+    .icons-container
+    {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+        gap: 1.5rem;
+        background-color: #eee;
+
+        .icon
+        {
+            display: flex;
+            align-items: center;
+            gap:1.5rem;
+            padding: 2rem;
+            background: #fff;
+            box-shadow: $box-shadow;
+            border-radius: .5rem;
+
+            i
+            {
+                height: 6rem;
+                width: 6rem;
+                line-height: 6rem;
+                font-size: 2.5rem;
+                border-radius: 50%;
+                background-color: #eee;
+                color: black;
+                text-align: center;
+                
+            }
+
+            .content
+            {
+                h3
+                {
+                    color:$middleGreen;
+                    font-size: 2.5rem;
+
+                }
+
+                p
+                {
+                    color: $blackGreen;
+                    font-size: 1.5rem;
+                }
+            }
+
+        }
+
+        .icon:hover
+        {
+            background: black;
+
+            i
+            {
+                background: #57D131;
+            }
+
+            .content
+            {
+                p
+                {
+                    color: white;
+                }
+
+                h3
+                {
+                    color: #B9E937;
+                }
+            }
+        }
+    }
+
+    .swiper-pagination
+    {
+        .swiper-pagination-bullet-active
+        {
+            background:$lightGreen;
+        }
+    }
+
+
+
+    .vehicles
+    {
+
+        
+        .vehicle-slider
+        {
+            padding-bottom: 5rem; 
+
+           
+            .swiper-wrapper
+            {   
+                    .swiper-slide-active
+                {
+                    img
+                    {
+                       
+                       opacity: 1;
+                       transform: scale(1);
+                        
+                    }
+
+                    .content
+                    {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+  
+
+            .box
+            {
+                text-align: center;
+                width: 30rem;
+
+                img
+                {
+                    
+                    opacity: .5;
+                    transform: scale(.8);
+                }
+
+                .content
+                {
+                    transform: scale(0);
+                    padding-top: 1rem;
+
+                    h3
+                    {
+                        font-size: 2.5rem;
+                        color: black;
+                    }
+
+                    .price
+                    {
+                        font-size: 2.5rem;
+                        color: $middleGreen;
+                        padding: 1rem 0;
+                        font-weight: bolder;
+
+                        span
+                        {
+                            
+                        font-size: 1.7rem;
+                        color: $blackGreen;
+                        padding: 1rem 0;
+                        font-weight: normal;
+                        }
+                    }
+
+                    p
+                    {
+                        font-size: 1.6rem;
+                        padding: 1rem;
+                        padding-top: 1.5rem;
+                        border-top: $border;
+                        color: $blackGreen;
+
+                        span
+                        {
+                            color: black;
+                            font-size: .8rem;
+                            padding: 0 .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .services
+    {
+        .box-container
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+            gap: 1.5rem;
+
+            .box
+            {
+                text-align: center;
+                padding: 2rem;
+                border-radius: .5rem;
+                box-shadow: $box-shadow;
+                border: $border;
+
+                i
+                {
+                    height: 6rem;
+                    width: 6rem;
+                    line-height: 6rem;
+                    font-size: 2.5rem;
+                    color: black;
+                    background:$middleGreen;
+                    border-radius: 50%;
+                    margin-bottom: 1rem;
+
+                }
+
+                h3
+                {
+                    color: $blackGreen;
+                    font-size: 2.2rem;
+                }
+
+                p
+                {
+                    font-size: 1.5rem;
+                    padding: 1rem 0;
+                    line-height: 1.8;
+                }
+            }
+
+            .box:hover
+            {
+                background: black;
+
+                h3
+                {
+                    color: $middleGreen;
+                }
+
+                p
+                {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .featured
+    {
+        .featured-slider
+        {
+            padding: 1rem;
+            padding-bottom: 4rem;
+
+            .swiper-wrapper
+            {
+                .box
+                {
+                    text-align: center;
+                    padding: 2rem;
+                    box-shadow: $box-shadow;
+                    border: $border;
+                    border-radius: .5rem;
+
+                    img
+                    {
+                        height: 20rem;
+                        width: 100%;
+                    }
+
+                    h3
+                    {
+                        font-size: 2.2rem;
+                    }
+
+                    .stars
+                    {
+                        padding: 1rem 0;
+                        i
+                        {
+                            font-size: 1.7rem;
+                            color: yellowgreen;
+                        }
+
+                    }
+
+                    .price
+                    {
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .box:hover
+                {
+                    img
+                    {
+                        transform: scale(.9);
+                    }
+                }
+            }
+        }
+    }
+
+    .review
+    {
+        background: $weirdColor;
+        .review-slider
+        {
+            padding-bottom: 3rem;
+
+            .swiper-wrapper
+            {
+                .swiper-slide-active
+                {
+                    background: white;
+                    opacity: 1;
+                    transform: scale(1.1);
+                    box-shadow: $box-shadow;
+                    border: $border;
+                }
+            }
+            .box
+            {
+                padding: 2rem 1.7rem;
+                margin: 2rem 0;
+                text-align: center;
+                opacity: .4;
+                transform: scale(.9);
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    margin-bottom: 1rem;
+                }
+
+                .content
+                {
+                    p{
+                        font-size: 1.4rem;
+                        color: $blackGreen;
+                        padding: 1rem 0;
+                    }
+
+                    h3
+                    {
+                        font-size: 2.2rem;
+                        color: $middleGreen;
+                    }
+
+                    .stars
+                    {
+                        i
+                        {
+                            font-size: 1.7rem;
+                            color: $blackGreen;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact
+    {
+        .row
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+            .map
+            {
+                flex: 1 1 42rem;
+                width: 100%;
+                padding: 2rem; 
+                border: $border;
+                box-shadow: $box-shadow;
+                border-radius: .5rem;
+             }
+            }
+
+            form
+            {
+                flex: 1 1 42rem;
+               padding: 5rem; 
+               border: $border;
+               box-shadow: $box-shadow;
+               border-radius: .5rem;
+               text-align: center;
+
+               h3
+               {
+                font-size: 3rem;
+               }
+
+               .box
+               {
+                margin: .7rem 0;
+                width: 100%;
+                border: $border;
+                padding: 1rem;
+                font-size: 1.6rem;
+                text-transform: capitalize;
+                border-radius: .5rem;
+
+               }
+
+               textarea
+               {
+                height: 15rem;
+                resize: none;
+               }
+            }
+        }
+
+        .footer
+        {
+            display: flex;
+            justify-content: space-between;
+            background: $weirdColor;
+
+            .container {
+                width: 96px;
+                height: 64px;
+                position: relative;
+                overflow: hidden;
+              }
+              
+              .sprite {
+                width: 96px;
+                height: 64px;
+                background-image: url('../images/png/sprite.png');
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: spriteAnimation 0.4s steps(6) infinite;
+              }
+              
+             
+
+            .credit
+            {
+                align-self: flex-end;
+            }
+
+           
+              
+              .sprite:hover {
+                background-position: -3456px -192px; /* Modificăm poziția de fundal pentru a afișa ultimul cadru al sprite-ului */
+              }
+
+            .logo
+            {
+                align-self: center;
+
+               
+                font-size: 7rem;
+                color: $lightGreen;
+                font-weight: bolder;
+                span
+                {
+                    color:$blackGreen;
+                }
+            
+            }
+                
+            .box-container
+            {
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+                gap:1.5rem;
+
+
+                
+              
+
+                .box
+                {
+                    h3
+                    {
+                        color: black;
+                        font-size: 2.5rem;
+                        padding: 1rem 0;
+                    }
+
+                    a
+                    {
+                        color: $middleGreen;
+                        font-size: 2rem;
+                        display: inline-block;
+                        padding: 1rem 0;
+
+                        i
+                        {
+                            padding-right: .5rem;
+                            color: black;
+                        }
+                    }
+
+                    a:hover
+                    {
+
+                        i
+                        {
+                            padding-right: .2rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+    
+
+
+    }
+    
+
+   
+}
+
+
+
+
+// media-queries
+
+
+@media (max-width:1124px)
+{
+    .home
+    {
+        
+
+        h1
+        {
+            font-size: 6vh !important;
+            
+        }
+    }
+}
+
+@media (max-width:1050px) {
+
+    html
+    {
+        font-size: 55% !important;
+    }
+
+    .header
+    {
+        padding: 2rem !important;
+    }
+
+    .header.active
+    {
+        padding: 2rem;
+    }
+
+    // section
+    // {
+    //     padding: 2rem!important;
+        
+    // }
+
+    .home
+    {
+        
+
+        h1
+        {
+            font-size: 5.5vh !important;
+            
+        }
+    }
+    
+}
+
+
+@media (max-width:805px)
+{
+    .header
+    {
+        #menu-btn
+            {
+                display: block !important;
+            }
+
+        #menu-btn.fa-times
+        {
+            transform: rotate(180deg);
+        }
+
+
+        #login-btn
+        {
+            i
+            {
+                color: black;
+                display: block !important;
+            }
+
+            .btn
+            {
+                display: none;
+            }
+        }
+
+        .navbar
+        {
+            position: absolute;
+            top: 99%; left: 0; right: 0;
+            background: white;
+            border-top: $border;
+            clip-path: polygon(0 0,100% 0,100% 0,0 0);
+
+            a
+            {
+                display: block;
+                margin: 2rem;
+                font-size: 2rem;
+            }
+        }
+
+        .active
+        {
+            clip-path:polygon(0 0,100% 0,100% 100%,0% 100%);
+        }
+
+        
+    }
+
+    .home
+    {
+        
+
+        h1
+        {
+            font-size: 5vh !important;
+            
+        }
+    }
+
+    .footer
+    {
+        .logo
+        {
+            font-size: 4rem !important;
+
+        }
+    }
+} 
+
+@media (max-width:450px) {
+
+    html
+    {
+        font-size: 50% !important;
+    }
+
+    .home
+    {
+        
+
+        h1
+        {
+            font-size: 3vh !important;
+            
+        }
+    }
+
+    .heading
+    {
+        font-size: 3rem !important;
+    }
+
+    .footer
+    {
+        .logo
+        {
+            font-size: 3rem !important;
+
+        }
+    }
+    
+}
+
+

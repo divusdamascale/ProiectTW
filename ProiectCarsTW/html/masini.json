@@ -1,0 +1,74 @@
+[
+    {
+        "imagine": "../images/png/car-1.png",
+        "titlu": "Audi S4",
+        "pret": "300$",
+        "an": "2020",
+        "transmisie": "Automată",
+        "combustibil": "Motorină",
+        "viteza_maxima": "190km/h"
+    },
+    {
+        "imagine": "../images/png/car-2.png",
+        "titlu": "Volkswagen Polo",
+        "pret": "150$",
+        "an": "2021",
+        "transmisie": "Manuală",
+        "combustibil": "Benzină",
+        "viteza_maxima": "210km/h"
+    },
+    {
+        "imagine": "../images/png/car-3.png",
+        "titlu": "Audi TT",
+        "pret": "120$",
+        "an": "2022",
+        "transmisie": "Automată",
+        "combustibil": "Electric",
+        "viteza_maxima": "250km/h"
+    },
+    {
+        "imagine": "../images/png/car-4.png",
+        "titlu": "Hyundai Sonata",
+        "pret": "200$",
+        "an": "2022",
+        "transmisie": "Automată",
+        "combustibil": "Electric",
+        "viteza_maxima": "250km/h"
+    },
+    {
+        "imagine": "../images/png/car-5.png",
+        "titlu": "Audi S6",
+        "pret": "200$",
+        "an": "2022",
+        "transmisie": "Automată",
+        "combustibil": "Electric",
+        "viteza_maxima": "250km/h"
+    },
+    {
+        "imagine": "../images/png/car-6.png",
+        "titlu": "Ford Focus",
+        "pret": "450$",
+        "an": "2022",
+        "transmisie": "Automată",
+        "combustibil": "Electric",
+        "viteza_maxima": "250km/h"
+    },
+    {
+        "imagine": "../images/png/car-7.png",
+        "titlu": "Mercedes ML",
+        "pret": "200$",
+        "an": "2022",
+        "transmisie": "Automată",
+        "combustibil": "Electric",
+        "viteza_maxima": "250km/h"
+    },
+    {
+        "imagine": "../images/png/car-8.png",
+        "titlu": "Mercedes C180",
+        "pret": "200$",
+        "an": "2022",
+        "transmisie": "Automată",
+        "combustibil": "Electric",
+        "viteza_maxima": "250km/h"
+    }
+]
